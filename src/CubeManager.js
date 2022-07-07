@@ -102,6 +102,7 @@ export default class CubeManager {
       const wall = new THREE.Mesh(geometry, material)
       wall.map = map
       wall.key = key
+      wall.geometry.translate(0, 0, 0.25)
       wall.rotation.copy(rotation)
       this.walls.push(wall)
       this.game.sceneManager.scene.add(wall)
