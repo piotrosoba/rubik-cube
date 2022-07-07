@@ -17,15 +17,15 @@ export default class CubeManager {
 
   AXIS_TO_ROTATE = { x: 'y', y: 'x', z: 'z' }
   wallColors = {
-    top: new THREE.MeshBasicMaterial({ color: 0xffff00 }),
-    bottom: new THREE.MeshBasicMaterial({ color: 0xffffff }),
-    left: new THREE.MeshBasicMaterial({ color: 0xff0000 }),
-    right: new THREE.MeshBasicMaterial({ color: 0x00ff00 }),
-    front: new THREE.MeshBasicMaterial({ color: 0x0000ff }),
-    back: new THREE.MeshBasicMaterial({ color: 0xff00ff }),
-    black: new THREE.MeshBasicMaterial({ color: 0x404040 })
+    top: new THREE.MeshBasicMaterial({ color: 0x719382 }),
+    bottom: new THREE.MeshBasicMaterial({ color: 0xaebb8f }),
+    left: new THREE.MeshBasicMaterial({ color: 0xdc9770 }),
+    right: new THREE.MeshBasicMaterial({ color: 0xcc7161 }),
+    front: new THREE.MeshBasicMaterial({ color: 0x894c4a }),
+    back: new THREE.MeshBasicMaterial({ color: 0xebd79c }),
+    default: new THREE.MeshBasicMaterial({ color: 0x524744 })
   }
-  getWallColor = wall => this.wallColors[wall] || this.wallColors.black
+  getWallColor = wall => this.wallColors[wall] || this.wallColors.default
 
   makeCube() {
     this.makeWalls()
